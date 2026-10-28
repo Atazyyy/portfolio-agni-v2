@@ -531,6 +531,7 @@ a { color: inherit; }
 }
 .xp-body p { font-size: .85rem; color: var(--ink-70); }
 .xp-award { margin-top: 10px; font-size: .72rem !important; color: var(--rust) !important; }
+.xp-verify { margin-top: 10px; font-size: .7rem; }
 
 /* ================= ABOUT ================= */
 
