@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agni Miftah Fauzi — Software &amp; AI Engineer, Bandung</title>
+  <meta name="description" content="Portfolio of Agni Miftah Fauzi: AI systems, data pipelines, automation, and 31 live web product demos. Electrical Engineering background, Bandung, Indonesia.">
+  <meta property="og:title" content="Agni Miftah Fauzi — Software &amp; AI Engineer">
+  <meta property="og:description" content="AI systems, data pipelines, automation, and 31 live web product demos.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A63A20'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23F5F1E8' text-anchor='middle'%3EA.%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#work">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-head">
+    <div class="wrap head-grid">
+      <a class="wordmark" href="#top">Agni Miftah<span class="wm-dot">.</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#index">Index</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="status-chip" href="#contact"><span class="dot" aria-hidden="true"></span>Open to work</a>
+      <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero wrap" aria-label="Introduction">
+      <div class="hero-meta mono reveal">
+        <span>Portfolio — 2026</span>
+        <span>Bandung, Indonesia · 6.9°S 107.6°E</span>
+        <span class="hide-sm">Electrical Engineering, UIN SGD</span>
+      </div>
+
+      <h1 class="hero-name">
+        <span class="reveal">Building things that</span>
+        <span class="reveal hero-line-2">actually <em>ship</em><span class="ink-dot">.</span></span>
+      </h1>
+
+      <div class="hero-lower">
+        <p class="hero-intro reveal">
+          I'm Agni Miftah Fauzi — a software &amp; AI engineer. I design AI-powered tools,
+          data pipelines, and web applications: usually in Python and TypeScript, often with
+          AI coding assistants beside me, always verified with tests and browser QA before
+          anyone else sees them.
+        </p>
+
+        <ul class="hero-nums" aria-label="Selected numbers">
+          <li class="reveal"><strong>31</strong><span class="mono">live web demos</span></li>
+          <li class="reveal"><strong>139,832</strong><span class="mono">rows through my data pipeline</span></li>
+          <li class="reveal"><strong>42</strong><span class="mono">automated tests, all passing</span></li>
+          <li class="reveal"><strong>87%</strong><span class="mono">receipt-detection accuracy (mAP50)</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 01 SELECTED WORK ================= -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-label mono">01 — Selected work</span>
+          <h2 id="work-title" class="sec-title">Six projects, chosen with care</h2>
+          <p class="sec-sub">Not a wall of cards — just the work, with the numbers it earned.</p>
+        </header>
+
+        <div class="work-list">
+
+          <!-- 1. Tanamanies Cafe Analytics -->
+          <article class="work-row reveal">
+            <a class="work-media" href="https://tanamanies-cafe-analytics.streamlit.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/tanamanies-analytics.jpg" alt="Tanamanies Cafe Analytics — dashboard mockup" width="1400" height="781" loading="lazy">
+            </a>
+            <div class="work-body">
+              <span class="work-no mono">№ 01</span>
+              <h3 class="work-title">Tanamanies Cafe Analytics</h3>
+              <p class="work-desc">
+                A complete data pipeline for a simulated three-outlet coffee business:
+                139,832 raw POS rows cleaned with pandas, modelled in DuckDB, served through
+                a five-tab Streamlit dashboard — plus a read-only MCP server so Claude can
+                query the data directly. Covered by 42 passing tests.
+              </p>
+              <dl class="work-meta mono">
+                <div><dt>Stack</dt><dd>Python · pandas · DuckDB · Streamlit · MCP</dd></div>
+                <div><dt>Year</dt><dd>2026</dd></div>
+                <div><dt>Status</dt><dd><a class="u-link" href="https://tanamanies-cafe-analytics.streamlit.app" target="_blank" rel="noopener noreferrer">Live — streamlit.app ↗</a></dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- 2. Caku Finance -->
+          <article class="work-row row-flip reveal">
+            <a class="work-media" href="https://github.com/Atazyyy" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/work/caku-finance.jpg" alt="Caku Finance — Flutter app with receipt OCR" width="1600" height="840" loading="lazy">
+            </a>
+            <div class="work-body">
+              <span class="work-no mono">№ 02</span>
+              <h3 class="work-title">Caku Finance</h3>
+              <p class="work-desc">
+                A personal finance app that reads receipts: YOLOv8 detects the items,
+                EasyOCR reads them, and a FastAPI backend keeps the whole thing offline-first.
+                Scored 87% mAP50 on detection and 84 SUS — "Excellent" — in usability testing
+                for my final project.
+              </p>
+              <dl class="work-meta mono">
+                <div><dt>Stack</dt><dd>Flutter · YOLOv8 · EasyOCR · FastAPI · SQLite</dd></div>
+                <div><dt>Year</dt><dd>2026</dd></div>
+                <div><dt>Status</dt><dd>Final project — prototype</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- 3. PromptCraft -->
+          <article class="work-row reveal">
+            <a class="work-media" href="https://github.com/Atazyyy/PromptCraft" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/promptcraft.jpg" alt="PromptCraft — gamified prompt engineering platform" width="1400" height="781" loading="lazy">
+            </a>
+            <div class="work-body">
+              <span class="work-no mono">№ 03</span>
+              <h3 class="work-title">PromptCraft</h3>
+              <p class="work-desc">
+                An interactive school for prompt engineering, in Bahasa Indonesia:
+                12 lessons, 60+ quiz questions, 19 templates, and a gamification layer —
+                XP, streaks, 12 achievements — that keeps learners coming back.
+              </p>
+              <dl class="work-meta mono">
+                <div><dt>Stack</dt><dd>React · TypeScript · Tailwind · Framer Motion</dd></div>
+                <div><dt>Year</dt><dd>2026</dd></div>
+                <div><dt>Status</dt><dd><a class="u-link" href="https://github.com/Atazyyy/PromptCraft" target="_blank" rel="noopener noreferrer">Open source — GitHub ↗</a></dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- 4. AtapDigital AI -->
+          <article class="work-row row-flip reveal">
+            <a class="work-media" href="https://atapdigital.id" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/work/atapdigital-ai.jpg" alt="AtapDigital AI — Claude-powered social media toolkit" width="1600" height="840" loading="lazy">
+            </a>
+            <div class="work-body">
+              <span class="work-no mono">№ 04</span>
+              <h3 class="work-title">AtapDigital AI</h3>
+              <p class="work-desc">
+                A web toolkit for agency content work — competitor analysis, caption
+                generation, and content ideas — backed by 12+ prompt templates running on
+                Claude 3.5 Sonnet, with PDF/Markdown export and multi-client support.
+              </p>
+              <dl class="work-meta mono">
+                <div><dt>Stack</dt><dd>Python · Flask · Claude API</dd></div>
+                <div><dt>Year</dt><dd>2026</dd></div>
+                <div><dt>Status</dt><dd><a class="u-link" href="https://atapdigital.id" target="_blank" rel="noopener noreferrer">atapdigital.id ↗</a></dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- 5. AtaziSpace OS -->
+          <article class="work-row reveal">
+            <a class="work-media" href="assets/img/work/atazispace-layers.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/atazispace-os.jpg" alt="AtaziSpace OS — Notion operations system, simulation" width="1400" height="781" loading="lazy">
+            </a>
+            <div class="work-body">
+              <span class="work-no mono">№ 05</span>
+              <h3 class="work-title">AtaziSpace OS <span class="work-flag mono">simulation</span></h3>
+              <p class="work-desc">
+                A lean company operating system designed in Notion for a hypothetical
+                design-and-build studio: five linked databases (clients, projects, tasks,
+                budget items, OKRs), two automations, AI-assisted prompts, and two SOPs.
+                A labelled simulation — no real client data, and no real client named.
+              </p>
+              <dl class="work-meta mono">
+                <div><dt>Stack</dt><dd>Notion · OKR · Automations · SOP</dd></div>
+                <div><dt>Year</dt><dd>2026</dd></div>
+                <div><dt>Status</dt><dd>Case study + walkthrough video</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- 6. Tanamanies Cafe demo -->
+          <article class="work-row row-flip reveal">
+            <a class="work-media" href="https://tanamanies-cafe.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/tanamanies-cafe.jpg" alt="Tanamanies Cafe — company profile concept demo" width="1400" height="781" loading="lazy">
+            </a>
+            <div class="work-body">
+              <span class="work-no mono">№ 06</span>
+              <h3 class="work-title">Tanamanies Cafe <span class="work-flag mono">concept demo</span></h3>
+              <p class="work-desc">
+                The first of 31 live concept demos — a warm company-profile site for a
+                fictional Bandung plant café, with menu, gallery, and WhatsApp ordering.
+                It now shares its brand with my data-pipeline project above, on purpose.
+              </p>
+              <dl class="work-meta mono">
+                <div><dt>Stack</dt><dd>React · Vite · Tailwind</dd></div>
+                <div><dt>Year</dt><dd>2026</dd></div>
+                <div><dt>Status</dt><dd><a class="u-link" href="https://tanamanies-cafe.vercel.app" target="_blank" rel="noopener noreferrer">Live — vercel.app ↗</a></dd></div>
+              </dl>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 THE INDEX ================= -->
+    <section class="section section-alt" id="index" aria-labelledby="index-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-label mono">02 — The index</span>
+          <h2 id="index-title" class="sec-title">Everything else, on the record</h2>
+          <p class="sec-sub">The full archive: data &amp; AI systems, hardware, and a series of 31 live concept demos. Fictional brands, real engineering.</p>
+        </header>
+
+        <div class="filters mono reveal" role="group" aria-label="Filter projects">
+          <button class="filter is-active" data-filter="all">All <sup id="count-all"></sup></button>
+          <button class="filter" data-filter="ai">AI &amp; data <sup id="count-ai"></sup></button>
+          <button class="filter" data-filter="web">Web &amp; product <sup id="count-web"></sup></button>
+          <button class="filter" data-filter="hw">Hardware <sup id="count-hw"></sup></button>
+        </div>
+
+        <div id="indexRows">
+
+          <!-- AI & DATA -->
+          <div class="idx-group-head mono" data-cat="ai">
+            <span>AI &amp; data systems</span><span>——</span>
+          </div>
+
+          <a class="idx-row reveal" data-cat="ai" href="https://github.com/Atazyyy/tanamanies-weekly-report" target="_blank" rel="noopener noreferrer">
+            <span class="idx-no mono">01</span>
+            <span class="idx-name">Tanamanies Weekly Report</span>
+            <span class="idx-desc">Apps Script turns a messy sales sheet into a weekly summary — email + Telegram, Monday 07:00 trigger, audit log, and a proper off-switch. Runs weekly on a real Google Sheet.</span>
+            <span class="idx-stack mono">Apps Script · JS</span>
+            <span class="idx-year mono">'26</span>
+            <span class="idx-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="idx-row reveal" data-cat="ai" href="https://github.com/Atazyyy/tanamanies-cafe-analytics" target="_blank" rel="noopener noreferrer">
+            <span class="idx-no mono">02</span>
+            <span class="idx-name">MCP Server — Tanamanies</span>
+            <span class="idx-desc">Read-only MCP server (4 tools, SELECT-only, row limits) so Claude can safely query the DuckDB warehouse behind the analytics dashboard.</span>
+            <span class="idx-stack mono">MCP · Python · DuckDB</span>
+            <span class="idx-year mono">'26</span>
+            <span class="idx-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <div class="idx-row reveal" data-cat="ai">
+            <span class="idx-no mono">03</span>
+            <span class="idx-name">Caku Automation</span>
+            <span class="idx-desc">Telegram bot that receives receipt photos, OCRs them with Gemini, and files the numbers into Google Sheets — orchestrated in n8n, shipped in Docker with ngrok tunneling.</span>
+            <span class="idx-stack mono">n8n · Telegram · Gemini · Docker</span>
+            <span class="idx-year mono">'26</span>
+            <span class="idx-arrow" aria-hidden="true"></span>
+          </div>
+
+          <div class="idx-row reveal" data-cat="ai">
+            <span class="idx-no mono">04</span>
+            <span class="idx-name">Weather Prediction RNN</span>
+            <span class="idx-desc">Recurrent neural network for weather variables from time-series data, with accuracy evaluation across model variants.</span>
+            <span class="idx-stack mono">Python · TensorFlow · RNN</span>
+            <span class="idx-year mono">'25</span>
+            <span class="idx-arrow" aria-hidden="true"></span>
+          </div>
+
+          <!-- WEB & PRODUCT -->
+          <div class="idx-group-head mono" data-cat="web">
+            <span>Web &amp; product</span><span>——</span>
+          </div>
+
+          <p class="idx-note reveal" data-cat="web">
+            <strong>31 concept demos, all live.</strong> I designed and shipped 31 full web products for
+            my web-development practice — every one QA'd in a real browser before going live.
+            Twelve of them look like this:
+          </p>
+
+          <div class="demo-wall" data-cat="web">
+            <a class="demo-cell reveal" data-cat="web" href="https://teinun.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/teinun.jpg" alt="Teinun — fashion e-commerce demo" width="1400" height="781" loading="lazy">
+              <span class="mono">Teinun — e-commerce ↗</span>
+            </a>
+            <a class="demo-cell reveal" data-cat="web" href="https://lapakhub.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/lapakhub.jpg" alt="LapakHub — POS and inventory demo" width="1400" height="781" loading="lazy">
+              <span class="mono">LapakHub — POS + inventory ↗</span>
+            </a>
+            <a class="demo-cell reveal" data-cat="web" href="https://barberlagi.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/barberlagi.jpg" alt="BarberLagi — barbershop booking demo" width="1400" height="781" loading="lazy">
+              <span class="mono">BarberLagi — booking ↗</span>
+            </a>
+            <a class="demo-cell reveal" data-cat="web" href="https://miesalnya.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/miesalnya.jpg" alt="MieSalnyy — digital menu demo" width="1400" height="781" loading="lazy">
+              <span class="mono">MieSalnyy — digital menu ↗</span>
+            </a>
+            <a class="demo-cell reveal" data-cat="web" href="https://panggunggema.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/panggunggema.jpg" alt="Panggunggema — event and ticketing demo with 3D hero" width="1400" height="781" loading="lazy">
+              <span class="mono">Panggunggema — events, 3D hero ↗</span>
+            </a>
+            <a class="demo-cell reveal" data-cat="web" href="https://rentakara.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/rentakara.jpg" alt="Rentakara — car rental demo" width="1400" height="781" loading="lazy">
+              <span class="mono">Rentakara — car rental ↗</span>
+            </a>
+            <a class="demo-cell reveal" data-cat="web" href="https://tiketara.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/tiketara.jpg" alt="Tiketara — helpdesk ticketing demo" width="1400" height="781" loading="lazy">
+              <span class="mono">Tiketara — helpdesk, 74 KB ↗</span>
+            </a>
+            <a class="demo-cell reveal" data-cat="web" href="https://relasera.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/relasera.jpg" alt="Relasera — CRM pipeline demo" width="1400" height="781" loading="lazy">
+              <span class="mono">Relasera — CRM pipeline ↗</span>
+            </a>
+            <a class="demo-cell reveal" data-cat="web" href="https://niagava.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/niagava.jpg" alt="Niagava — mini ERP demo" width="1400" height="781" loading="lazy">
+              <span class="mono">Niagava — mini ERP ↗</span>
+            </a>
+            <a class="demo-cell reveal" data-cat="web" href="https://belajiva.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/belajiva.jpg" alt="Belajiva — learning management system demo" width="1400" height="781" loading="lazy">
+              <span class="mono">Belajiva — LMS ↗</span>
+            </a>
+            <a class="demo-cell reveal" data-cat="web" href="https://absensiva.vercel.app" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/thumbs/absensiva.jpg" alt="Absensiva — HRIS attendance demo" width="1400" height="781" loading="lazy">
+              <span class="mono">Absensiva — HRIS ↗</span>
+            </a>
+            <a class="demo-cell reveal" data-cat="web" href="#work">
+              <img src="assets/img/thumbs/tanamanies-cafe.jpg" alt="Tanamanies Cafe — featured above" width="1400" height="781" loading="lazy">
+              <span class="mono">Tanamanies Cafe — featured above</span>
+            </a>
+          </div>
+
+          <p class="idx-note reveal" data-cat="web">…and nineteen more, shipped in a single sprint. Each one live:</p>
+
+          <div class="demo-rows" data-cat="web">
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://kirimva.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">13</span><span class="idx-name">Kirimva</span><span class="idx-desc">Ekspedisi &amp; logistik — lacak resi, kurir, gudang</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://dagangara.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">14</span><span class="idx-name">Dagangara</span><span class="idx-desc">Marketplace multi-vendor — keranjang per toko, panel vendor</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://tanyara.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">15</span><span class="idx-name">Tanyara</span><span class="idx-desc">Chatbot CS AI rule-based — panel agen, basis jawaban</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://tulisva.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">16</span><span class="idx-name">Tulisva</span><span class="idx-desc">CMS blog — editor, media library, statistik</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://diskusiva.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">17</span><span class="idx-name">Diskusiva</span><span class="idx-desc">Forum Q&amp;A — upvote, jawaban terbaik</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://saparia.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">18</span><span class="idx-name">Saparia</span><span class="idx-desc">Media sosial — feed, follow, trending hashtag</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://rekrutara.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">19</span><span class="idx-name">Rekrutara</span><span class="idx-desc">Job portal — skor kecocokan, panel rekruter</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://huniva.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">20</span><span class="idx-name">Huniva</span><span class="idx-desc">Properti — kalkulator KPR, jadwal survei</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://jemputa.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">21</span><span class="idx-name">Jemputa</span><span class="idx-desc">Ride-hailing — peta SVG, tarif per km, dompet</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://tugasara.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">22</span><span class="idx-name">Tugasara</span><span class="idx-desc">Project management — kanban 3 proyek, log aktivitas</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://lekasva.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">23</span><span class="idx-name">Lekasva</span><span class="idx-desc">Telemedicine — janji temu, chat konsultasi, rekam medis</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://surveiva.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">24</span><span class="idx-name">Surveiva</span><span class="idx-desc">Form builder — 6 tipe soal, export CSV</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://saldoara.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">25</span><span class="idx-name">Saldoara</span><span class="idx-desc">Dompet digital — QRIS simulasi, budget, donut SVG</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://bidvara.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">26</span><span class="idx-name">Bidvara</span><span class="idx-desc">Lelang online — countdown nyata, bot bidder, watchlist</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://galangva.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">27</span><span class="idx-name">Galangva</span><span class="idx-desc">Crowdfunding — progress donasi, leaderboard</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://wartara.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">28</span><span class="idx-name">Wartara</span><span class="idx-desc">Portal berita — ticker, artikel fiktif berlabel</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://otoara.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">29</span><span class="idx-name">Otoara</span><span class="idx-desc">Fleet management — rute SVG, jam mengemudi, servis</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://sisvara.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">30</span><span class="idx-name">Sisvara</span><span class="idx-desc">Manajemen sekolah — nilai &amp; KKM, absensi, rapor</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+            <a class="idx-row idx-row-sm reveal" data-cat="web" href="https://awanusa.vercel.app" target="_blank" rel="noopener noreferrer"><span class="idx-no mono">31</span><span class="idx-name">Awanusa</span><span class="idx-desc">Multi-tenant SaaS — 3 tenant terisolasi, gating paket</span><span class="idx-stack mono">React · Vite</span><span class="idx-year mono">'26</span><span class="idx-arrow" aria-hidden="true">↗</span></a>
+          </div>
+
+          <!-- HARDWARE -->
+          <div class="idx-group-head mono" data-cat="hw">
+            <span>Hardware &amp; robotics</span><span>——</span>
+          </div>
+
+          <div class="idx-row reveal" data-cat="hw">
+            <span class="idx-no mono">32</span>
+            <span class="idx-name">Bioreactor Agitator Control</span>
+            <span class="idx-desc">Developed and calibrated the agitator control system of a bioreactor prototype during my internship at LSKK ITB — aligned actual vs displayed rotation speed through systematic testing.</span>
+            <span class="idx-stack mono">Control systems · Python</span>
+            <span class="idx-year mono">'24</span>
+            <span class="idx-arrow" aria-hidden="true"></span>
+          </div>
+
+          <div class="idx-row reveal" data-cat="hw">
+            <span class="idx-no mono">33</span>
+            <span class="idx-name">RF Energy Harvesting</span>
+            <span class="idx-desc">Multistage RF-to-DC converter harvesting ambient RF signals; tested and tuned the circuit for conversion efficiency.</span>
+            <span class="idx-stack mono">Electronics · RF · Circuit design</span>
+            <span class="idx-year mono">'25</span>
+            <span class="idx-arrow" aria-hidden="true"></span>
+          </div>
+
+          <div class="idx-row reveal" data-cat="hw">
+            <span class="idx-no mono">34</span>
+            <span class="idx-name">RFID Attendance System</span>
+            <span class="idx-desc">RFID attendance with NodeMCU ESP8266 and a web interface for real-time monitoring and recording.</span>
+            <span class="idx-stack mono">IoT · NodeMCU · RFID</span>
+            <span class="idx-year mono">'23</span>
+            <span class="idx-arrow" aria-hidden="true"></span>
+          </div>
+
+          <div class="idx-row reveal" data-cat="hw">
+            <span class="idx-no mono">35</span>
+            <span class="idx-name">Line Follower Robot</span>
+            <span class="idx-desc">IR-sensor line follower on Arduino with control logic tuned for stable path tracking.</span>
+            <span class="idx-stack mono">Arduino · C++ · Robotics</span>
+            <span class="idx-year mono">'23</span>
+            <span class="idx-arrow" aria-hidden="true"></span>
+          </div>
+
+          <div class="idx-row reveal" data-cat="hw">
+            <span class="idx-no mono">36</span>
+            <span class="idx-name">Sumo Robot</span>
+            <span class="idx-desc">Combat robot on distance sensors; movement control optimised for competition performance.</span>
+            <span class="idx-stack mono">Arduino · C++ · Competition</span>
+            <span class="idx-year mono">'23</span>
+            <span class="idx-arrow" aria-hidden="true"></span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03 EXPERIENCE ================= -->
+    <section class="section" id="experience" aria-labelledby="exp-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-label mono">03 — Experience</span>
+          <h2 id="exp-title" class="sec-title">The record so far</h2>
+        </header>
+
+        <div class="xp-cols">
+          <div class="xp-col">
+            <h3 class="xp-heading mono reveal">Work</h3>
+
+            <div class="xp-row reveal">
+              <span class="xp-date mono">Mar 2026 — Present</span>
+              <div class="xp-body">
+                <h4>Drone Nation — Drone Technician</h4>
+                <p>Maintenance, diagnosis and repair of drone systems: gimbals, ESCs, flight controllers, batteries. Root-cause analysis on hardware failures.</p>
+              </div>
+            </div>
+
+            <div class="xp-row reveal">
+              <span class="xp-date mono">Jan 2021 — Present</span>
+              <div class="xp-body">
+                <h4>Freelance Technician &amp; IT Support</h4>
+                <p>10+ smartphones repaired, countless systems optimised. Diagnostics, IT consulting, and the client-communication skills that came with it.</p>
+              </div>
+            </div>
+
+            <div class="xp-row reveal">
+              <span class="xp-date mono">Jan 2021 — Present</span>
+              <div class="xp-body">
+                <h4>Freelance Graphic &amp; Logo Designer</h4>
+                <p>100+ designs delivered — logos, flyers, social media content. Five years of real clients, real deadlines, real revisions.</p>
+              </div>
+            </div>
+
+            <div class="xp-row reveal">
+              <span class="xp-date mono">Jul — Aug 2024</span>
+              <div class="xp-body">
+                <h4>Rumahan Vest — Founder</h4>
+                <p>Founded a small custom-vest apparel brand; sold 12+ units while running design, orders, and promotion.</p>
+              </div>
+            </div>
+
+            <h3 class="xp-heading mono reveal">Organizations</h3>
+
+            <div class="xp-row reveal">
+              <span class="xp-date mono">Aug 2022 — Jan 2023</span>
+              <div class="xp-body">
+                <h4>Gerakan Mengajar Desa, Cianjur — Tutor</h4>
+                <p>Taught and mentored rural students; organised interactive learning sessions.</p>
+              </div>
+            </div>
+
+            <div class="xp-row reveal">
+              <span class="xp-date mono">Aug 2021 — Jan 2023</span>
+              <div class="xp-body">
+                <h4>BSO Robotika UIN SGD — Staff, Communication &amp; Info</h4>
+                <p>Managed communications and designed digital materials for the robotics club.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="xp-col">
+            <h3 class="xp-heading mono reveal">Education</h3>
+
+            <div class="xp-row reveal">
+              <span class="xp-date mono">Aug 2021 — Feb 2026</span>
+              <div class="xp-body">
+                <h4>UIN Sunan Gunung Djati Bandung</h4>
+                <p>Bachelor of Electrical Engineering — GPA 3.62/4.00. Focus courses, all A: Control Systems, Machine Learning, AI Systems, Computer Vision + Lab, Probability &amp; Statistics, Programming.</p>
+                <p class="xp-award mono">★ 1st Place — Videography Competition, EE Anniversary 2022</p>
+              </div>
+            </div>
+
+            <h3 class="xp-heading mono reveal">Certification</h3>
+
+            <div class="xp-row reveal">
+              <span class="xp-date mono">Oct — Dec 2024</span>
+              <div class="xp-body">
+                <h4>Cisco — Introduction to Networks</h4>
+                <p>TCP/IP, IP addressing, subnetting, routing, and basic network troubleshooting. PTIPD UIN SGD × Lumina Eka Optima.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 04 ABOUT ================= -->
+    <section class="section section-alt" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-label mono">04 — About</span>
+          <h2 id="about-title" class="sec-title">The person behind the commits</h2>
+        </header>
+
+        <div class="about-grid">
+          <figure class="about-photo reveal">
+            <img src="assets/img/profile.jpg" alt="Portrait of Agni Miftah Fauzi" width="1000" height="1502" loading="lazy">
+          </figure>
+
+          <div class="about-text">
+            <p class="about-lede reveal">
+              I'm an electrical engineer who ended up in software — and I mean that literally:
+              university taught me control systems, freelancing taught me deadlines, and repairing
+              drones taught me that hardware always finds a new way to surprise you.
+            </p>
+            <p class="reveal">
+              Somewhere along the way I started automating things. First receipts, then reports,
+              then entire workflows. Today I build AI-powered tools, data pipelines, and web
+              applications — mostly in Python and TypeScript, usually with AI coding assistants at
+              my side and unit tests as my safety net.
+            </p>
+            <p class="reveal">
+              I care that things work in the real world: documented, tested, deployed — and
+              stoppable. If a system can't be turned off cleanly, it isn't finished.
+            </p>
+
+            <h3 class="xp-heading mono reveal">How I work</h3>
+            <ol class="how-list">
+              <li class="reveal"><strong>Understand first, code second.</strong> I write the problem down before I write the solution. Most bugs I've ever shipped were requirements I didn't question.</li>
+              <li class="reveal"><strong>Build with AI, verify like a skeptic.</strong> AI assistants make me faster; tests, browser QA, and reading the diff make me correct.</li>
+              <li class="reveal"><strong>Test like the user, not the author.</strong> Every project gets clicked through in a real browser — the way a stranger would break it.</li>
+              <li class="reveal"><strong>Document for the next person.</strong> A good README says what it is, how it works, how to stop it, and why it matters.</li>
+            </ol>
+
+            <h3 class="xp-heading mono reveal">Capabilities</h3>
+            <div class="cap-grid">
+              <div class="cap-col reveal">
+                <h4 class="mono">AI &amp; machine learning</h4>
+                <ul><li>Prompt engineering</li><li>Claude / Gemini API integration</li><li>YOLOv8 · OpenCV · EasyOCR</li><li>TensorFlow · RNN</li></ul>
+              </div>
+              <div class="cap-col reveal">
+                <h4 class="mono">Data &amp; backend</h4>
+                <ul><li>Python · pandas · DuckDB · SQL</li><li>FastAPI · Flask · pytest</li><li>Streamlit · MCP</li><li>SQLite · Docker</li></ul>
+              </div>
+              <div class="cap-col reveal">
+                <h4 class="mono">Automation</h4>
+                <ul><li>n8n workflows</li><li>Telegram bots</li><li>Google Apps Script</li><li>Webhooks &amp; scheduling</li></ul>
+              </div>
+              <div class="cap-col reveal">
+                <h4 class="mono">Frontend &amp; mobile</h4>
+                <ul><li>React · TypeScript · Vite</li><li>Tailwind CSS · Framer Motion</li><li>Flutter</li><li>HTML/CSS by hand</li></ul>
+              </div>
+              <div class="cap-col reveal">
+                <h4 class="mono">Embedded &amp; hardware</h4>
+                <ul><li>Arduino · NodeMCU</li><li>Circuit design · RF</li><li>Control systems</li><li>Drone maintenance</li></ul>
+              </div>
+              <div class="cap-col reveal">
+                <h4 class="mono">Also</h4>
+                <ul><li>Git &amp; GitHub workflow</li><li>Vercel deployment</li><li>Notion systems &amp; SOPs</li><li>Graphic design (100+ shipped)</li></ul>
+              </div>
+            </div>
+
+            <p class="about-lang mono reveal">Languages — Indonesian: native · English: intermediate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 05 CONTACT ================= -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <span class="sec-label mono reveal">05 — Contact</span>
+        <h2 id="contact-title" class="contact-title reveal">
+          Let's build something<br>that <em>ships</em><span class="paper-dot">.</span>
+        </h2>
+        <p class="contact-sub reveal">
+          Open to AI Engineer, AI Specialist, and software roles — in Bandung or remote.
+          If you're hiring, or just want a second pair of eyes on an automation idea,
+          my inbox is the fastest way in.
+        </p>
+        <a class="contact-mail reveal" href="mailto:agnimiftahfauza@gmail.com">agnimiftahfauza@gmail.com<span class="mail-arrow" aria-hidden="true">↗</span></a>
+
+        <div class="contact-links mono reveal">
+          <a href="https://github.com/Atazyyy" target="_blank" rel="noopener noreferrer">GitHub — @Atazyyy ↗</a>
+          <a href="https://www.linkedin.com/in/agni-miftah-fauzi" target="_blank" rel="noopener noreferrer">LinkedIn — agni-miftah-fauzi ↗</a>
+          <a href="https://atapdigital.id" target="_blank" rel="noopener noreferrer">atapdigital.id ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-foot">
+    <div class="wrap foot-grid mono">
+      <span>© 2026 Agni Miftah Fauzi</span>
+      <span class="hide-sm">Set in Fraunces, Archivo &amp; JetBrains Mono — hand-coded, no template.</span>
+      <span>Bandung — <span id="clock">··:··</span> WIB</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
