@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Line Follower Robot — Documentation | Agni Miftah Fauzi</title>
+  <meta name="description" content="Autonomous line-follower robot on Arduino — IR sensor array, DC motor driver, and proportional control for stable path tracking.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A63A20'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23F5F1E8' text-anchor='middle'%3EA.%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#doc">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap head-grid">
+      <a class="wordmark" href="../index.html">Agni Miftah<span class="wm-dot">.</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#index">Index</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="status-chip" href="../index.html#contact"><span class="dot" aria-hidden="true"></span>Open to work</a>
+      <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="doc">
+    <article class="doc-hero wrap">
+      <a class="back-link mono" href="../index.html#index">← Back to the index</a>
+      <p class="sec-label mono">Project documentation — Index 35</p>
+      <h1 class="doc-title">Line Follower Robot</h1>
+      <p class="doc-sub">An autonomous robot that reads a line with IR sensors and holds it through corners — Arduino, motor driver, and proportional control tuned until the tracking stopped wobbling.</p>
+      <dl class="doc-meta mono">
+        <div><dt>Year</dt><dd>2023</dd></div>
+        <div><dt>Type</dt><dd>Robotics</dd></div>
+        <div><dt>Stack</dt><dd>Arduino · C++ · Electronics</dd></div>
+      </dl>
+      <figure class="doc-hero-media">
+        <img src="../assets/img/work/line-follower.jpg" alt="Line follower robot — project mockup" width="1600" height="840">
+      </figure>
+    </article>
+
+    <div class="wrap doc-grid">
+      <div class="doc-main">
+
+        <section>
+          <h2 class="sec-label mono">Overview</h2>
+          <p>
+            The line follower is the "hello world" of robotics — and still the clearest lesson in
+            closed-loop control you can hold in your hand. This build uses an IR sensor array to
+            detect the path, an Arduino Uno to process it, and a motor driver to steer two DC
+            motors along the line.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">The problem</h2>
+          <p>
+            Bang-bang control (turn hard left / hard right) makes robots zig-zag. The tracking
+            needed a proportional response: the further the line sits from the sensor array's
+            center, the harder the correction — smooth and fast instead of twitchy.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">Key components</h2>
+          <div class="feat-row"><strong>Arduino Uno</strong><p>Main microcontroller running the control loop.</p></div>
+          <div class="feat-row"><strong>IR sensor array</strong><p>Line detection under the chassis.</p></div>
+          <div class="feat-row"><strong>DC motors + driver</strong><p>Differential steering for movement.</p></div>
+          <div class="feat-row"><strong>Proportional control</strong><p>Error-scaled corrections for smooth tracking.</p></div>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">What it taught me</h2>
+          <ul class="learn-list">
+            <li>Control tuning is empirical — you adjust, you watch, you adjust again</li>
+            <li>Sensor placement and height matter as much as the algorithm</li>
+            <li>Simple systems, fully understood, beat complex systems half-understood</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <aside class="doc-side">
+        <div class="side-card">
+          <h3>At a glance</h3>
+          <ul>
+            <li>IR array + Arduino Uno</li>
+            <li>Proportional path correction</li>
+            <li>Stable through corners</li>
+            <li>Completed</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Stack</h3>
+          <ul>
+            <li>Arduino</li>
+            <li>C++</li>
+            <li>Electronics</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Related</h3>
+          <ul>
+            <li><a class="u-link" href="sumo-robot.html">Sumo Robot →</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap doc-end">
+      <h2>Questions about this build?</h2>
+      <a class="back-link mono" href="../index.html#contact">Get in touch →</a>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid mono">
+      <span>© 2026 Agni Miftah Fauzi</span>
+      <span class="hide-sm">Set in Fraunces, Archivo &amp; JetBrains Mono — hand-coded, no template.</span>
+      <span>Bandung — <span id="clock">··:··</span> WIB</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

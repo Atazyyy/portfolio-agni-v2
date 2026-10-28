@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Prediction RNN — Documentation | Agni Miftah Fauzi</title>
+  <meta name="description" content="Recurrent neural network for weather prediction from time-series data — TensorFlow/Keras, preprocessing, hyperparameter tuning, and prediction-vs-actual evaluation.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A63A20'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23F5F1E8' text-anchor='middle'%3EA.%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#doc">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap head-grid">
+      <a class="wordmark" href="../index.html">Agni Miftah<span class="wm-dot">.</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#index">Index</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="status-chip" href="../index.html#contact"><span class="dot" aria-hidden="true"></span>Open to work</a>
+      <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="doc">
+    <article class="doc-hero wrap">
+      <a class="back-link mono" href="../index.html#index">← Back to the index</a>
+      <p class="sec-label mono">Project documentation — Index 04</p>
+      <h1 class="doc-title">Weather Prediction RNN</h1>
+      <p class="doc-sub">A recurrent neural network that learns weather from historical time-series data — built and trained with TensorFlow/Keras, evaluated honestly against actual values.</p>
+      <dl class="doc-meta mono">
+        <div><dt>Year</dt><dd>2024</dd></div>
+        <div><dt>Type</dt><dd>Machine learning</dd></div>
+        <div><dt>Stack</dt><dd>Python · TensorFlow · Keras · NumPy · Pandas</dd></div>
+      </dl>
+      <figure class="doc-hero-media">
+        <img src="../assets/img/work/weather-rnn.jpg" alt="Weather prediction RNN — project mockup" width="1600" height="840">
+      </figure>
+    </article>
+
+    <div class="wrap doc-grid">
+      <div class="doc-main">
+
+        <section>
+          <h2 class="sec-label mono">Overview</h2>
+          <p>
+            Weather is the classic time-series problem: strongly seasonal, noisy, and easy to
+            overfit. This project builds an RNN that analyses historical weather patterns and
+            forecasts future variables, with preprocessing and tuning treated as first-class
+            parts of the work rather than afterthoughts.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">The problem</h2>
+          <p>
+            Forecasting matters everywhere from agriculture to disaster preparedness. The
+            modelling challenge is sequence structure — each prediction depends on a long window
+            of history, which is exactly what recurrent architectures are for.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">What it does</h2>
+          <div class="feat-row"><strong>RNN architecture</strong><p>Sequential data processing for time-series analysis.</p></div>
+          <div class="feat-row"><strong>Data preprocessing</strong><p>Time-series normalization and feature engineering.</p></div>
+          <div class="feat-row"><strong>Hyperparameter tuning</strong><p>Systematic optimization for model performance.</p></div>
+          <div class="feat-row"><strong>Evaluation</strong><p>Predictions compared against actual values, with accuracy reported per model variant.</p></div>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">What it taught me</h2>
+          <ul class="learn-list">
+            <li>Preprocessing choices move the metric more than architecture choices</li>
+            <li>A model that can't be compared against actual values can't be trusted</li>
+            <li>Time-series data punishes leakage ruthlessly</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <aside class="doc-side">
+        <div class="side-card">
+          <h3>At a glance</h3>
+          <ul>
+            <li>Sequence modelling with RNN</li>
+            <li>TensorFlow / Keras</li>
+            <li>Predictions vs actual evaluation</li>
+            <li>Completed</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Stack</h3>
+          <ul>
+            <li>Python</li>
+            <li>TensorFlow · Keras</li>
+            <li>NumPy · Pandas</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap doc-end">
+      <h2>Questions about this build?</h2>
+      <a class="back-link mono" href="../index.html#contact">Get in touch →</a>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid mono">
+      <span>© 2026 Agni Miftah Fauzi</span>
+      <span class="hide-sm">Set in Fraunces, Archivo &amp; JetBrains Mono — hand-coded, no template.</span>
+      <span>Bandung — <span id="clock">··:··</span> WIB</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

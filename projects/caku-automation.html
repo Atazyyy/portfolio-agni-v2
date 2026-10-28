@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caku Automation — Documentation | Agni Miftah Fauzi</title>
+  <meta name="description" content="Caku Automation: AI-enhanced personal finance automation — Telegram bot, n8n workflow, Google Gemini OCR, Google Sheets, Docker and ngrok.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A63A20'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23F5F1E8' text-anchor='middle'%3EA.%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#doc">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap head-grid">
+      <a class="wordmark" href="../index.html">Agni Miftah<span class="wm-dot">.</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#index">Index</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="status-chip" href="../index.html#contact"><span class="dot" aria-hidden="true"></span>Open to work</a>
+      <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="doc">
+    <article class="doc-hero wrap">
+      <a class="back-link mono" href="../index.html#index">← Back to the index</a>
+      <p class="sec-label mono">Project documentation — Index 03</p>
+      <h1 class="doc-title">Caku Automation</h1>
+      <p class="doc-sub">AI-enhanced personal finance automation: send a receipt photo to a Telegram bot, get structured data filed into Google Sheets — no app, no manual entry.</p>
+      <dl class="doc-meta mono">
+        <div><dt>Year</dt><dd>2026</dd></div>
+        <div><dt>Type</dt><dd>Workflow automation</dd></div>
+        <div><dt>Interface</dt><dd>Telegram bot</dd></div>
+        <div><dt>Hosting</dt><dd>Docker + ngrok tunnel</dd></div>
+        <div><dt>Stack</dt><dd>n8n · Telegram Bot API · Google Gemini · Google Sheets</dd></div>
+        <div><dt>Links</dt><dd>This page is the reference documentation</dd></div>
+      </dl>
+      <figure class="doc-hero-media">
+        <img src="../assets/img/work/caku-automation.jpg" alt="Caku Automation — n8n workflow mockup" width="1600" height="840">
+      </figure>
+    </article>
+
+    <div class="wrap doc-grid">
+      <div class="doc-main">
+
+        <section>
+          <h2 class="sec-label mono">Overview</h2>
+          <p>
+            Caku Automation is the companion to Caku Finance — same problem (receipts are annoying),
+            different shape. Instead of a mobile app, it is a pipeline: an n8n workflow orchestrates
+            a Telegram bot, Google Gemini OCR, and Google Sheets into one automated bookkeeping loop.
+          </p>
+          <p>
+            The flow is short by design. You send a receipt photo to the bot. n8n receives the file,
+            encodes it, asks Gemini to extract the structured data, and writes the result to a
+            spreadsheet — then the bot confirms back to you with what was saved. The whole workflow
+            is self-hosted in Docker with an ngrok tunnel for webhook access.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">What it does</h2>
+          <div class="feat-row"><strong>Telegram bot integration</strong><p>Interactive bot for receiving commands and receipt uploads directly from users.</p></div>
+          <div class="feat-row"><strong>Receipt image processing</strong><p>File upload handling with Base64 encoding feeding the OCR pipeline.</p></div>
+          <div class="feat-row"><strong>AI-powered OCR</strong><p>Google Gemini extracts structured data from receipt images automatically.</p></div>
+          <div class="feat-row"><strong>Google Sheets integration</strong><p>Parsed expenses written and synchronized to a cloud spreadsheet.</p></div>
+          <div class="feat-row"><strong>Error handling</strong><p>Telegram notifications for workflow errors and status updates — failures are never silent.</p></div>
+          <div class="feat-row"><strong>Manual input support</strong><p>Text-based expense entry for receipts that cannot be photographed.</p></div>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">The workflow, end to end</h2>
+          <p>
+            Photo → Telegram → n8n webhook → Gemini OCR prompt → parsed JSON → Google Sheets row →
+            confirmation message back in Telegram. If any node fails, the error branch sends a
+            notification instead of dropping the receipt on the floor.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">Workflow screenshots</h2>
+          <div class="shot-grid">
+            <figure class="shot"><img src="../assets/img/shots/caku-automation/01-n8n-workflow.jpg" alt="n8n workflow overview" width="775" height="799" loading="lazy"><figcaption>n8n workflow dashboard</figcaption></figure>
+            <figure class="shot"><img src="../assets/img/shots/caku-automation/02-n8n-editor.jpg" alt="n8n workflow editor" width="1200" height="750" loading="lazy"><figcaption>n8n workflow editor</figcaption></figure>
+            <figure class="shot"><img src="../assets/img/shots/caku-automation/03-ngrok-terminal.jpg" alt="ngrok tunnel setup" width="1200" height="750" loading="lazy"><figcaption>ngrok tunnel setup</figcaption></figure>
+          </div>
+          <div class="shot-grid portrait" style="margin-top:20px">
+            <figure class="shot"><img src="../assets/img/shots/caku-automation/04-telegram-receipt.jpg" alt="Telegram receipt upload" width="720" height="1600" loading="lazy"><figcaption>Telegram — receipt upload</figcaption></figure>
+            <figure class="shot"><img src="../assets/img/shots/caku-automation/05-telegram-success.jpg" alt="Telegram success message" width="720" height="1600" loading="lazy"><figcaption>Telegram — data saved</figcaption></figure>
+            <figure class="shot"><img src="../assets/img/shots/caku-automation/06-telegram-sheets.jpg" alt="Google Sheets sync" width="720" height="1600" loading="lazy"><figcaption>Google Sheets — synced rows</figcaption></figure>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">Key learnings</h2>
+          <ul class="learn-list">
+            <li>n8n workflow orchestration and node configuration</li>
+            <li>Telegram Bot API integration for user interaction</li>
+            <li>Docker containerization for self-hosted automation</li>
+            <li>ngrok tunneling for webhook accessibility</li>
+            <li>AI prompt engineering for receipt data extraction</li>
+            <li>Cloud integration via the Google Sheets API</li>
+            <li>Error handling and notification systems</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <aside class="doc-side">
+        <div class="side-card">
+          <h3>At a glance</h3>
+          <ul>
+            <li>End-to-end automation, zero manual entry</li>
+            <li>Self-hosted — Docker</li>
+            <li>Failure notifications via Telegram</li>
+            <li>Paired with the Caku Finance app</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Stack</h3>
+          <ul>
+            <li>n8n — orchestration</li>
+            <li>Telegram Bot API</li>
+            <li>Google Gemini — OCR</li>
+            <li>Google Sheets — storage</li>
+            <li>Docker + ngrok — hosting</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Source</h3>
+          <p class="side-note">
+            Kept off GitHub on purpose — this page is the documentation. If you want to see how
+            the workflow is wired, <a class="u-link" href="../index.html#contact">ask me</a> and I'll walk you through it live.
+          </p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap doc-end">
+      <h2>Questions about this build?</h2>
+      <a class="back-link mono" href="../index.html#contact">Get in touch →</a>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid mono">
+      <span>© 2026 Agni Miftah Fauzi</span>
+      <span class="hide-sm">Set in Fraunces, Archivo &amp; JetBrains Mono — hand-coded, no template.</span>
+      <span>Bandung — <span id="clock">··:··</span> WIB</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

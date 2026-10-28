@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bioreactor Agitator Control — Documentation | Agni Miftah Fauzi</title>
+  <meta name="description" content="Agitator control system for a bioreactor prototype — internship at Lab Sistem Kendali dan Komputer (LSKK), Institut Teknologi Bandung.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A63A20'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23F5F1E8' text-anchor='middle'%3EA.%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#doc">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap head-grid">
+      <a class="wordmark" href="../index.html">Agni Miftah<span class="wm-dot">.</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#index">Index</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="status-chip" href="../index.html#contact"><span class="dot" aria-hidden="true"></span>Open to work</a>
+      <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="doc">
+    <article class="doc-hero wrap">
+      <a class="back-link mono" href="../index.html#index">← Back to the index</a>
+      <p class="sec-label mono">Project documentation — Index 32</p>
+      <h1 class="doc-title">Bioreactor Agitator Control</h1>
+      <p class="doc-sub">A feedback-controlled mixing system for a bioreactor prototype — built and calibrated during my control-engineering internship at LSKK, Institut Teknologi Bandung.</p>
+      <dl class="doc-meta mono">
+        <div><dt>Period</dt><dd>Jan — Mar 2024</dd></div>
+        <div><dt>Institution</dt><dd>Lab Sistem Kendali dan Komputer (LSKK), ITB</dd></div>
+        <div><dt>Type</dt><dd>Research &amp; instrumentation</dd></div>
+        <div><dt>Stack</dt><dd>PID control · Python · Data analysis</dd></div>
+      </dl>
+      <figure class="doc-hero-media">
+        <img src="../assets/img/work/bioreactor.jpg" alt="Bioreactor agitator control — project mockup" width="1600" height="840">
+      </figure>
+    </article>
+
+    <div class="wrap doc-grid">
+      <div class="doc-main">
+
+        <section>
+          <h2 class="sec-label mono">Overview</h2>
+          <p>
+            Bioreactors need precise control of mixing speed — too slow and the culture starves of
+            oxygen, too fast and you shear the cells. During my internship at LSKK ITB I developed
+            and calibrated the agitator control system for a bioreactor prototype: a feedback loop
+            that holds the target rotation speed and reports it in real time on the display.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">The problem</h2>
+          <p>
+            The prototype's agitator showed one speed on screen and did another in the vessel —
+            a display-truth gap that makes any downstream measurement unreliable. The system needed
+            calibrated feedback control so that what the operator sees is what the fluid gets.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">Key achievements</h2>
+          <div class="feat-row"><strong>Speed calibration</strong><p>Aligned actual rotation speed with the displayed value through systematic measurement.</p></div>
+          <div class="feat-row"><strong>Control accuracy</strong><p>Improved control accuracy and overall system performance.</p></div>
+          <div class="feat-row"><strong>Mixing efficiency</strong><p>Enhanced through precise speed regulation.</p></div>
+          <div class="feat-row"><strong>Data analysis</strong><p>Comprehensive testing and performance evaluation of the loop.</p></div>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">What it taught me</h2>
+          <ul class="learn-list">
+            <li>Feedback control on real hardware, where sensors are noisy and calibration is the job</li>
+            <li>Measurement discipline — trust nothing until you have logged it</li>
+            <li>Working inside a research lab's standards and documentation habits</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <aside class="doc-side">
+        <div class="side-card">
+          <h3>At a glance</h3>
+          <ul>
+            <li>Internship project — LSKK ITB</li>
+            <li>Feedback (PID-style) control loop</li>
+            <li>Real-time speed display</li>
+            <li>Completed &amp; handed over</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Stack</h3>
+          <ul>
+            <li>PID control</li>
+            <li>Python</li>
+            <li>Data analysis</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Related</h3>
+          <ul>
+            <li><a class="u-link" href="../index.html#experience">Experience — LSKK internship</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap doc-end">
+      <h2>Questions about this build?</h2>
+      <a class="back-link mono" href="../index.html#contact">Get in touch →</a>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid mono">
+      <span>© 2026 Agni Miftah Fauzi</span>
+      <span class="hide-sm">Set in Fraunces, Archivo &amp; JetBrains Mono — hand-coded, no template.</span>
+      <span>Bandung — <span id="clock">··:··</span> WIB</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

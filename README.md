@@ -8,9 +8,10 @@ Rebuilt from scratch as a hand-coded, single-page editorial site. No template, n
 ## What's inside
 
 - `index.html` — the whole site (single page, 5 sections)
+- `projects/` — 10 documentation pages, one per documented project (Caku Finance, Caku Automation, PromptCraft, AtapDigital AI, Weather RNN, Bioreactor, RF Harvesting, RFID Attendance, Line Follower, Sumo Robot), migrated from the previous site's project pages
 - `assets/css/style.css` — design system: warm paper, ink, one rust accent
 - `assets/js/main.js` — ~90 lines of vanilla JS: scroll reveal, index filters, Bandung clock
-- `assets/img/` — compressed project imagery (~2.2 MB total)
+- `assets/img/` — compressed project imagery (~4.9 MB total)
 
 ## Design decisions (deliberately anti-"AI slop")
 

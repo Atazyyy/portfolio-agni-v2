@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RF Energy Harvesting — Documentation | Agni Miftah Fauzi</title>
+  <meta name="description" content="RF energy harvesting system: a multistage RF-to-DC converter that turns ambient radio-frequency signals into usable power.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A63A20'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23F5F1E8' text-anchor='middle'%3EA.%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#doc">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap head-grid">
+      <a class="wordmark" href="../index.html">Agni Miftah<span class="wm-dot">.</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#index">Index</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="status-chip" href="../index.html#contact"><span class="dot" aria-hidden="true"></span>Open to work</a>
+      <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="doc">
+    <article class="doc-hero wrap">
+      <a class="back-link mono" href="../index.html#index">← Back to the index</a>
+      <p class="sec-label mono">Project documentation — Index 33</p>
+      <h1 class="doc-title">RF Energy Harvesting</h1>
+      <p class="doc-sub">A multistage RF-to-DC converter that scavenges ambient radio-frequency energy — from cell towers, Wi-Fi routers, broadcast antennas — into usable DC power.</p>
+      <dl class="doc-meta mono">
+        <div><dt>Year</dt><dd>2025</dd></div>
+        <div><dt>Type</dt><dd>Electronics &amp; energy</dd></div>
+        <div><dt>Stack</dt><dd>RF systems · Circuit design · Impedance matching</dd></div>
+      </dl>
+      <figure class="doc-hero-media">
+        <img src="../assets/img/work/rf-harvesting.jpg" alt="RF energy harvesting — project mockup" width="1600" height="840">
+      </figure>
+    </article>
+
+    <div class="wrap doc-grid">
+      <div class="doc-main">
+
+        <section>
+          <h2 class="sec-label mono">Overview</h2>
+          <p>
+            Ambient RF is everywhere and mostly wasted. This project explores harvesting it: a
+            multistage converter circuit that rectifies ambient radio-frequency signals into DC,
+            with enough stages and gain to produce a measurable, usable output.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">The problem</h2>
+          <p>
+            Single-stage rectifiers can't do much with the micro-watt signals found in ordinary
+            rooms. The design has to stack voltage multiplication and match impedances carefully,
+            or the harvested power never makes it past the first stage.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">Key components</h2>
+          <div class="feat-row"><strong>Multistage rectifier</strong><p>RF-to-DC conversion across multiple cascaded stages.</p></div>
+          <div class="feat-row"><strong>Impedance matching</strong><p>Matching network for maximum power transfer from antenna to circuit.</p></div>
+          <div class="feat-row"><strong>Voltage multiplier</strong><p>Stages that boost the output voltage into a usable range.</p></div>
+          <div class="feat-row"><strong>Energy storage</strong><p>Capacitor bank to accumulate the harvested charge.</p></div>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">Results</h2>
+          <p>
+            Designed and tested a working multistage RF-to-DC converter. The circuit was measured
+            and tuned iteratively — stage count, matching, and storage — to improve conversion
+            efficiency from ambient signals. A hardware project that teaches patience: every
+            component value is a compromise.
+          </p>
+        </section>
+
+      </div>
+
+      <aside class="doc-side">
+        <div class="side-card">
+          <h3>At a glance</h3>
+          <ul>
+            <li>Ambient RF → usable DC</li>
+            <li>Multistage rectification</li>
+            <li>Measured &amp; optimised iteratively</li>
+            <li>Completed</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Stack</h3>
+          <ul>
+            <li>RF systems</li>
+            <li>Circuit design</li>
+            <li>Electronics prototyping</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap doc-end">
+      <h2>Questions about this build?</h2>
+      <a class="back-link mono" href="../index.html#contact">Get in touch →</a>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid mono">
+      <span>© 2026 Agni Miftah Fauzi</span>
+      <span class="hide-sm">Set in Fraunces, Archivo &amp; JetBrains Mono — hand-coded, no template.</span>
+      <span>Bandung — <span id="clock">··:··</span> WIB</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

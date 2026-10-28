@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumo Robot — Documentation | Agni Miftah Fauzi</title>
+  <meta name="description" content="Combat sumo robot for robotics competition — distance sensors for opponent and edge detection, aggressive push strategy on Arduino.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A63A20'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23F5F1E8' text-anchor='middle'%3EA.%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#doc">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap head-grid">
+      <a class="wordmark" href="../index.html">Agni Miftah<span class="wm-dot">.</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#index">Index</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="status-chip" href="../index.html#contact"><span class="dot" aria-hidden="true"></span>Open to work</a>
+      <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="doc">
+    <article class="doc-hero wrap">
+      <a class="back-link mono" href="../index.html#index">← Back to the index</a>
+      <p class="sec-label mono">Project documentation — Index 36</p>
+      <h1 class="doc-title">Sumo Robot</h1>
+      <p class="doc-sub">A combat robot built for competition: detect the opponent, respect the edge of the dohyo, and push harder than you get pushed.</p>
+      <dl class="doc-meta mono">
+        <div><dt>Year</dt><dd>2023</dd></div>
+        <div><dt>Type</dt><dd>Robotics competition</dd></div>
+        <div><dt>Stack</dt><dd>Arduino · C++ · Distance sensors</dd></div>
+      </dl>
+      <figure class="doc-hero-media">
+        <img src="../assets/img/work/sumo-robot.jpg" alt="Sumo robot — project mockup" width="1600" height="840">
+      </figure>
+    </article>
+
+    <div class="wrap doc-grid">
+      <div class="doc-main">
+
+        <section>
+          <h2 class="sec-label mono">Overview</h2>
+          <p>
+            Sumo rules are simple: stay in the ring, push the opponent out. The engineering is not.
+            This robot pairs distance sensors for finding the opponent with edge detection so it
+            never launches itself out of the arena — and movement control tuned to be aggressive
+            in the first half-second of contact.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">What it does</h2>
+          <div class="feat-row"><strong>Distance sensors</strong><p>Opponent detection feeding the attack strategy.</p></div>
+          <div class="feat-row"><strong>Edge detection</strong><p>Recognises the dohyo boundary and reverses before it's too late.</p></div>
+          <div class="feat-row"><strong>Aggressive strategy</strong><p>Charges on contact — points come from pushing, not poking.</p></div>
+          <div class="feat-row"><strong>Robust chassis</strong><p>Built to survive being pushed back.</p></div>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">What it taught me</h2>
+          <ul class="learn-list">
+            <li>Real-time sensor fusion under hard time pressure</li>
+            <li>Failure modes are physical — a lost wire ends the match instantly</li>
+            <li>Strategy tuning beats raw power in the ring</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <aside class="doc-side">
+        <div class="side-card">
+          <h3>At a glance</h3>
+          <ul>
+            <li>Opponent + edge detection</li>
+            <li>Competition-grade response time</li>
+            <li>Completed &amp; competed</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Stack</h3>
+          <ul>
+            <li>Arduino</li>
+            <li>C++</li>
+            <li>Distance sensors</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Related</h3>
+          <ul>
+            <li><a class="u-link" href="line-follower.html">Line Follower Robot →</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap doc-end">
+      <h2>Questions about this build?</h2>
+      <a class="back-link mono" href="../index.html#contact">Get in touch →</a>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid mono">
+      <span>© 2026 Agni Miftah Fauzi</span>
+      <span class="hide-sm">Set in Fraunces, Archivo &amp; JetBrains Mono — hand-coded, no template.</span>
+      <span>Bandung — <span id="clock">··:··</span> WIB</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
