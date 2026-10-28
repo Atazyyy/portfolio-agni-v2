@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtaziSpace OS — Documentation | Agni Miftah Fauzi</title>
+  <meta name="description" content="AtaziSpace OS: a lean digital-operations system for a hypothetical design & build studio — 5 linked Notion databases, 2 automations, AI prompts, and SOPs. A labelled simulation with dummy data.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A63A20'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23F5F1E8' text-anchor='middle'%3EA.%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#doc">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap head-grid">
+      <a class="wordmark" href="../index.html">Agni Miftah<span class="wm-dot">.</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#index">Index</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="status-chip" href="../index.html#contact"><span class="dot" aria-hidden="true"></span>Open to work</a>
+      <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="doc">
+    <article class="doc-hero wrap">
+      <a class="back-link mono" href="../index.html#work">← Back to work</a>
+      <p class="sec-label mono">Project documentation — № 05</p>
+      <h1 class="doc-title">AtaziSpace OS <span class="work-flag mono">simulation</span></h1>
+      <p class="doc-sub">Operations, systematized: a lean digital-operations system for a hypothetical design-and-build studio — five linked Notion databases, two automations, an AI prompt library, and two SOPs. Dummy data, no real client, labelled simulation by design.</p>
+      <dl class="doc-meta mono">
+        <div><dt>Year</dt><dd>2026</dd></div>
+        <div><dt>Role</dt><dd>Systems designer — schema, automations, prompts, SOPs</dd></div>
+        <div><dt>Platform</dt><dd>Notion (Free plan) · Make · Telegram · Tally</dd></div>
+        <div><dt>Status</dt><dd>Built as lean MVP — case study + walkthrough video</dd></div>
+      </dl>
+      <figure class="doc-hero-media">
+        <img src="../assets/img/thumbs/atazispace-os.jpg" alt="AtaziSpace OS — Notion operations system, simulation" width="1400" height="781">
+      </figure>
+    </article>
+
+    <div class="wrap doc-grid">
+      <div class="doc-main">
+
+        <section>
+          <h2 class="sec-label mono">What it is, and why it's a simulation</h2>
+          <p>
+            AtaziSpace OS is the operating system a small design-and-build company would run on:
+            leads become clients, clients have projects, projects have tasks and cost budgets
+            (RAB), and the whole company steers by quarterly OKRs — all connected, all visible in
+            one Command Center.
+          </p>
+          <p>
+            It was designed as a labelled simulation: every record is dummy data and no real
+            company is named, so the design itself is what's on trial. The brief was deliberately
+            lean — an MVP that proves the system works before anyone pays for the full version.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">The five databases</h2>
+          <div class="feat-row"><strong>Clients — CRM</strong><p>Source (Instagram, referral, website, ads, WhatsApp), pipeline status Lead → Qualified → Client → Lost, and a rollup of total project value per client.</p></div>
+          <div class="feat-row"><strong>Projects — delivery</strong><p>Pipeline from Lead through Survey, Design, RAB, Construction, Handover to Closed. Budget in Rupiah, PIC, dates, and a progress formula computed from task completion.</p></div>
+          <div class="feat-row"><strong>Tasks — execution</strong><p>Priorities P0–P2, assignees, due dates, and a days-left formula for triage.</p></div>
+          <div class="feat-row"><strong>RAB Items — cost plan</strong><p>Construction budget lines grouped by work category (Persiapan, Pondasi, Struktur, Dinding, Atap, …) with unit, qty × unit price, and line totals rolled up into the project.</p></div>
+          <div class="feat-row"><strong>OKR — steering</strong><p>One row per objective: quarter, owner, three key results, target vs current, and an auto progress formula flagged On Track / At Risk / Off Track.</p></div>
+          <p>
+            Everything is relational — relations, rollups, and formulas carry the numbers upward,
+            so the Command Center always reflects the work, not a copy of it.
+          </p>
+          <figure class="shot" style="margin-top:22px">
+            <img src="../assets/img/work/atazispace-layers.jpg" alt="AtaziSpace OS — digital operations layers diagram" width="1400" height="787" loading="lazy">
+            <figcaption>The system in layers: from lead intake to OKR steering.</figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">The views people actually use</h2>
+          <div class="feat-row"><strong>Command Center</strong><p>Linked views of Projects, Tasks, and OKRs on one page — the morning dashboard.</p></div>
+          <div class="feat-row"><strong>Projects board</strong><p>Board by delivery status, plus a table with progress bars.</p></div>
+          <div class="feat-row"><strong>My Tasks &amp; Overdue</strong><p>Personal queue (assignee = me, not done) and everything past due.</p></div>
+          <div class="feat-row"><strong>RAB by project</strong><p>Cost items grouped by project, then category — the view the principal reads.</p></div>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">Two automations, end to end</h2>
+          <div class="feat-row"><strong>Lead intake</strong><p>A Tally/Google Form submission flows through Make into Notion — client and project created automatically with status Lead — then a Telegram notification lands with the details.</p></div>
+          <div class="feat-row"><strong>Overdue reminder</strong><p>A daily Make schedule queries tasks that are due and not done, and pushes the list to Telegram before the day starts.</p></div>
+          <p>
+            Both scenarios are documented on an Integrations page: trigger, action, database ID,
+            workflow screenshots, example payloads, and error handling.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">AI prompts — 2 + 1</h2>
+          <div class="feat-row"><strong>Brief → Scope</strong><p>Paste messy client-meeting notes; get goal, scope, exclusions, assumptions, and risks.</p></div>
+          <div class="feat-row"><strong>Meeting notes → Action items</strong><p>Returns a table: decision, owner, due date.</p></div>
+          <div class="feat-row"><strong>Scope → RAB draft (bonus)</strong><p>From an approved scope, a first-draft cost table: item, qty, unit, estimated price, assumptions.</p></div>
+          <p>
+            Each prompt ships with a before/after example so the value is visible, not claimed.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">Two SOPs</h2>
+          <div class="feat-row"><strong>Lead intake → Survey</strong><p>Steps, the data to collect, and the SLA before a survey is scheduled.</p></div>
+          <div class="feat-row"><strong>Weekly ops review</strong><p>Agenda, the metrics to check, and the action items it must produce.</p></div>
+          <p>Both written to one format: purpose, scope, numbered steps, checklist, short FAQ.</p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">The free-plan constraint, engineered around</h2>
+          <p>
+            Notion Free has no Notion AI, limited database automation, and a 5 MB upload cap — so
+            the design routes around it: AI runs through external assistants with a portable prompt
+            library, automation runs through Make's free tier (1,000 ops), forms run through
+            Tally, and the walkthrough lives on video with a link. Constraints documented, not
+            hidden — the full version (quotation versioning, vendor tracking, key results as a
+            separate database, role permissions) is scoped and ready if a real company wants it.
+          </p>
+        </section>
+
+      </div>
+
+      <aside class="doc-side">
+        <div class="side-card">
+          <h3>At a glance</h3>
+          <ul>
+            <li>5 linked databases, 1 schema</li>
+            <li>2 end-to-end automations</li>
+            <li>2 + 1 AI prompts with before/after</li>
+            <li>2 SOPs, one format</li>
+            <li>Runs on Notion Free + Make free</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Stack</h3>
+          <ul>
+            <li>Notion — databases, views, formulas</li>
+            <li>Make — automation scenarios</li>
+            <li>Telegram — notifications</li>
+            <li>Tally / Google Forms — intake</li>
+            <li>External AI — prompt library</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Honesty note</h3>
+          <p class="side-note">
+            This is a personal simulation: dummy data, no real client, and no client company named
+            anywhere. The design, automations, and prompts are the portfolio piece.
+          </p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap doc-end">
+      <h2>Questions about this build?</h2>
+      <a class="back-link mono" href="../index.html#contact">Get in touch →</a>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid mono">
+      <span>© 2026 Agni Miftah Fauzi</span>
+      <span class="hide-sm">Set in Fraunces, Archivo &amp; JetBrains Mono — hand-coded, no template.</span>
+      <span>Bandung — <span id="clock">··:··</span> WIB</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

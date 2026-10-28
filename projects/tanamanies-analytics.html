@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanamanies Cafe Analytics — Documentation | Agni Miftah Fauzi</title>
+  <meta name="description" content="Tanamanies Cafe Analytics: end-to-end data pipeline for a simulated 3-outlet coffee business — 139,832 raw POS rows cleaned with pandas, DuckDB warehouse, Streamlit dashboard, and a read-only MCP server. 42 tests.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A63A20'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23F5F1E8' text-anchor='middle'%3EA.%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#doc">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap head-grid">
+      <a class="wordmark" href="../index.html">Agni Miftah<span class="wm-dot">.</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#index">Index</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="status-chip" href="../index.html#contact"><span class="dot" aria-hidden="true"></span>Open to work</a>
+      <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="doc">
+    <article class="doc-hero wrap">
+      <a class="back-link mono" href="../index.html#work">← Back to work</a>
+      <p class="sec-label mono">Project documentation — № 01</p>
+      <h1 class="doc-title">Tanamanies Cafe Analytics</h1>
+      <p class="doc-sub">An end-to-end data system for a simulated three-outlet coffee business: dirty POS exports go in one end; a cleaned DuckDB warehouse, an executive dashboard, and an AI assistant that can query the numbers come out the other.</p>
+      <dl class="doc-meta mono">
+        <div><dt>Year</dt><dd>2026</dd></div>
+        <div><dt>Role</dt><dd>Sole developer — pipeline, warehouse, dashboard, MCP</dd></div>
+        <div><dt>Status</dt><dd><a class="u-link" href="https://tanamanies-cafe-analytics.streamlit.app" target="_blank" rel="noopener noreferrer">Live — streamlit.app ↗</a></dd></div>
+        <div><dt>Stack</dt><dd>Python · pandas · DuckDB · SQL · Streamlit · Plotly · MCP · pytest</dd></div>
+        <div><dt>Links</dt><dd><a class="u-link" href="https://github.com/Atazyyy/tanamanies-cafe-analytics" target="_blank" rel="noopener noreferrer">GitHub ↗</a> · <a class="u-link" href="https://github.com/Atazyyy/tanamanies-weekly-report" target="_blank" rel="noopener noreferrer">Companion: Weekly Report ↗</a></dd></div>
+      </dl>
+      <figure class="doc-hero-media">
+        <img src="../assets/img/thumbs/tanamanies-analytics.jpg" alt="Tanamanies Cafe Analytics — project mockup" width="1400" height="781">
+      </figure>
+    </article>
+
+    <div class="wrap doc-grid">
+      <div class="doc-main">
+
+        <section>
+          <h2 class="sec-label mono">The problem it solves</h2>
+          <p>
+            Real multi-outlet F&amp;B businesses live with this: every outlet runs a different POS,
+            every export is dirty — dates in three formats, payment methods spelled sixteen ways,
+            outlet names inconsistent, duplicate exports, legacy product IDs — and management has
+            no single source of numbers they can trust.
+          </p>
+          <p>
+            Tanamanies Cafe is a fictional Bandung plant-café brand; the data is generated to be
+            dirty on purpose. The project demonstrates the full cure: one command turns raw POS
+            exports into an audited warehouse, a live dashboard, and AI-accessible metrics.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">How much data, and what's inside</h2>
+          <p>
+            The generator produces <strong>18 POS export files</strong> covering <strong>April–September 2026</strong>
+            for three outlets — <strong>Dipatiukur, Buah Batu, and Dago</strong> — totalling
+            <strong>139,832 raw rows</strong>. After cleaning, <strong>139,353 rows</strong> survive into the warehouse.
+            Each row is a sales line: date, outlet, product, category, quantity, unit price, payment
+            method, and order status (completed, VOID, or REFUND).
+          </p>
+          <div class="feat-row"><strong>479 duplicates</strong><p>Duplicate export rows detected and removed — every removal logged.</p></div>
+          <div class="feat-row"><strong>4,355 legacy IDs</strong><p>Old product IDs mapped to the current master via exact matching.</p></div>
+          <div class="feat-row"><strong>2,715 missing IDs</strong><p>Rows with no ID recovered by matching product names (difflib fuzzy matching, 0.8 cutoff).</p></div>
+          <div class="feat-row"><strong>3 date formats</strong><p>Mixed date formats normalised into one canonical type.</p></div>
+          <div class="feat-row"><strong>16+ payment labels</strong><p>Inconsistent payment-method spellings unified into a controlled vocabulary.</p></div>
+          <p>
+            Nothing is thrown away silently: every fix and every discarded row is recorded in a
+            data-quality report — an audit trail, not a shrug.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">The warehouse</h2>
+          <p>
+            Cleaned data lands in DuckDB as a small star schema — <strong>fact_sales</strong>,
+            <strong>dim_product</strong>, <strong>dim_outlet</strong> — plus <strong>6 analytic SQL views</strong> that
+            define every metric once. The dashboard, the MCP server, and manual queries all read
+            the same views, so the numbers can never disagree with each other.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">The dashboard — five tabs</h2>
+          <div class="feat-row"><strong>Ringkasan</strong><p>Headline KPIs and the omzet trend line for the selected period.</p></div>
+          <div class="feat-row"><strong>Perbandingan outlet</strong><p>Dipatiukur vs Buah Batu vs Dago — revenue and traffic side by side.</p></div>
+          <div class="feat-row"><strong>Produk terlaris</strong><p>Which products actually carry each outlet.</p></div>
+          <div class="feat-row"><strong>Jam ramai</strong><p>Heatmap of busy hours for staffing decisions.</p></div>
+          <div class="feat-row"><strong>Komposisi pembayaran</strong><p>How customers pay — and a full data-quality audit tab on top.</p></div>
+          <p>
+            VOID and REFUND orders are stored in the fact table with a status column but excluded
+            from every revenue figure — cancellations stay analysable without inflating omzet.
+          </p>
+          <figure class="shot" style="margin-top:22px">
+            <img src="../assets/img/shots/tanamanies-analytics/01-ringkasan.jpg" alt="Tanamanies Analytics — Ringkasan tab, real dashboard screenshot" width="1600" height="900" loading="lazy">
+            <figcaption>Real dashboard — Ringkasan (overview) tab.</figcaption>
+          </figure>
+          <figure class="shot" style="margin-top:20px">
+            <img src="../assets/img/shots/tanamanies-analytics/02-kualitas.jpg" alt="Tanamanies Analytics — Kualitas Data tab, cleaning audit trail" width="1600" height="900" loading="lazy">
+            <figcaption>Real dashboard — Kualitas Data tab: the cleaning audit trail, row by row.</figcaption>
+          </figure>
+          <figure class="shot" style="margin-top:20px">
+            <img src="../assets/img/work/analytics-plot.png" alt="Omzet per outlet, April–September 2026" width="1249" height="313" loading="lazy">
+            <figcaption>Omzet by outlet, April–September 2026 — three outlets, one month of weekly peaks at a glance.</figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">AI access via MCP</h2>
+          <p>
+            A local MCP server (src/mcp_server.py) lets any MCP client — Claude Desktop, Cursor,
+            ZCode — query the warehouse in natural language. Four read-only tools:
+            <strong>ringkasan_periode</strong>, <strong>top_produk</strong>, <strong>penjualan_harian</strong>, and
+            <strong>jalankan_sql</strong>. Safety rails: only SELECT/WITH statements accepted, results capped
+            at 200 rows. Ask it "compare the three outlets in August, and which products carry Dago?"
+            and it answers from the cleaned data — the same views the dashboard uses.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="sec-label mono">Testing &amp; reproducibility</h2>
+          <div class="metric-grid">
+            <div class="metric"><strong>42</strong><span>pytest unit tests covering every cleaning rule</span></div>
+            <div class="metric"><strong>seed 42</strong><span>RNG locked — regenerated data is always identical</span></div>
+          </div>
+          <p style="margin-top:18px">
+            Raw exports and the built database are never committed — only code, samples, and the
+            quality report. The same discipline you'd want around real production data.
+          </p>
+        </section>
+
+      </div>
+
+      <aside class="doc-side">
+        <div class="side-card">
+          <h3>At a glance</h3>
+          <ul>
+            <li>18 files · 139,832 raw rows</li>
+            <li>139,353 clean rows in DuckDB</li>
+            <li>3 outlets — Dipatiukur, Buah Batu, Dago</li>
+            <li>6 SQL views as single metric source</li>
+            <li>42 unit tests, all passing</li>
+            <li>Live on Streamlit Community Cloud</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Stack</h3>
+          <ul>
+            <li>Python — pipeline</li>
+            <li>pandas — cleansing</li>
+            <li>DuckDB + SQL — warehouse</li>
+            <li>Streamlit · Plotly — dashboard</li>
+            <li>MCP — AI access (read-only)</li>
+            <li>pytest — testing</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>Links</h3>
+          <ul>
+            <li><a class="u-link" href="https://tanamanies-cafe-analytics.streamlit.app" target="_blank" rel="noopener noreferrer">Live dashboard ↗</a></li>
+            <li><a class="u-link" href="https://github.com/Atazyyy/tanamanies-cafe-analytics" target="_blank" rel="noopener noreferrer">Source &amp; README ↗</a></li>
+            <li><a class="u-link" href="https://github.com/Atazyyy/tanamanies-weekly-report" target="_blank" rel="noopener noreferrer">Weekly Report companion ↗</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap doc-end">
+      <h2>Questions about this build?</h2>
+      <a class="back-link mono" href="../index.html#contact">Get in touch →</a>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid mono">
+      <span>© 2026 Agni Miftah Fauzi</span>
+      <span class="hide-sm">Set in Fraunces, Archivo &amp; JetBrains Mono — hand-coded, no template.</span>
+      <span>Bandung — <span id="clock">··:··</span> WIB</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
