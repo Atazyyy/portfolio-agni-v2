@@ -37,10 +37,9 @@ Or just open `index.html` in a browser — no build step.
 3. 02 The index — AI & data / web & product (31 demos) / hardware
 4. 03 Experience — work, education, organizations, certification
 5. 04 About — bio, how I work, capabilities
-6. 05 Contact — email, GitHub, LinkedIn, atapdigital.id
+6. 05 Contact — email, GitHub, LinkedIn
 
 ## Links
 
 - GitHub: [@Atazyyy](https://github.com/Atazyyy)
 - LinkedIn: [agni-miftah-fauzi](https://www.linkedin.com/in/agni-miftah-fauzi/)
-- Site: [atapdigital.id](https://atapdigital.id)
