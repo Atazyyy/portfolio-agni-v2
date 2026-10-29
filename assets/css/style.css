@@ -50,6 +50,8 @@ body {
 
 ::selection { background: var(--rust); color: var(--paper); }
 
+.count { font-variant-numeric: tabular-nums; }
+
 img { display: block; max-width: 100%; height: auto; }
 
 a { color: inherit; }

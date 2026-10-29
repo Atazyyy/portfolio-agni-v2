@@ -99,3 +99,102 @@ document.documentElement.classList.add('js');
   tick();
   setInterval(tick, 30000);
 })();
+
+/* ---------- count-up numbers when they scroll into view ----------
+   Every quantity in the copy counts up once. Deliberately NOT counted:
+   years (they're dates, not scores), single digits (P0, P2), decimals
+   (0.8 cutoff), and anything in .mono metadata (dates, coordinates). */
+(function () {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var RE = /\d+(?:[.,]\d+)*/g;
+
+  function parseToken(tok) {
+    if (tok.indexOf('.') !== -1) return null;                       // decimal — leave alone
+    if (tok.indexOf(',') !== -1 && !/^\d{1,3}(,\d{3})+$/.test(tok)) return null;
+    var n = parseInt(tok.replace(/,/g, ''), 10);
+    if (isNaN(n) || n < 10) return null;                            // single digits: skip
+    if (n >= 1900 && n <= 2100) return null;                        // a year: skip
+    return n;
+  }
+
+  function fmt(n, withCommas) {
+    return withCommas ? n.toLocaleString('en-US') : String(n);
+  }
+
+  function durationFor(n) {
+    if (n <= 99) return 800;
+    if (n <= 999) return 1000;
+    return 1300;
+  }
+
+  /* wrap every countable number in <span class="count"> keeping the final
+     value as content, so no-JS renders correctly and layout is stable */
+  var walker = document.createTreeWalker(document.querySelector('main') || document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode: function (node) {
+      if (!node.nodeValue || !/\d/.test(node.nodeValue)) return NodeFilter.FILTER_REJECT;
+      var el = node.parentElement;
+      if (!el || el.closest('.mono, .site-foot, script, style, noscript')) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+
+  var textNodes = [], node;
+  while ((node = walker.nextNode())) textNodes.push(node);
+
+  textNodes.forEach(function (tn) {
+    var text = tn.nodeValue, m, frag, last = 0, changed = false;
+    RE.lastIndex = 0;
+    while ((m = RE.exec(text)) !== null) {
+      var tok = m[0];
+      var before = text.charAt(m.index - 1);
+      var after = text.charAt(m.index + tok.length);
+      if (/[\w.,]/.test(before) || /[\w]/.test(after)) continue;    // glued to a word (mAP50) or decimal
+      var n = parseToken(tok);
+      if (n === null) continue;
+      if (!frag) frag = document.createDocumentFragment();
+      frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+      var span = document.createElement('span');
+      span.className = 'count';
+      span.textContent = tok;
+      span.setAttribute('data-n', n);
+      span.setAttribute('data-commas', tok.indexOf(',') !== -1 ? '1' : '0');
+      frag.appendChild(span);
+      last = m.index + tok.length;
+      changed = true;
+    }
+    if (changed) {
+      frag.appendChild(document.createTextNode(text.slice(last)));
+      tn.parentNode.replaceChild(frag, tn);
+    }
+  });
+
+  var counts = document.querySelectorAll('.count');
+  if (!counts.length) return;
+
+  function run(span) {
+    var final = parseInt(span.getAttribute('data-n'), 10);
+    var commas = span.getAttribute('data-commas') === '1';
+    var dur = durationFor(final);
+    var t0 = null;
+    function step(ts) {
+      if (t0 === null) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      span.textContent = fmt(Math.round(final * eased), commas);
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        run(entry.target);
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.6 });
+  counts.forEach(function (el) { io.observe(el); });
+})();
