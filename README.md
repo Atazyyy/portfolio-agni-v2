@@ -3,7 +3,7 @@
 Personal portfolio of **Agni Miftah Fauzi** — Software & AI Engineer, Bandung, Indonesia.
 Rebuilt from scratch as a hand-coded, single-page editorial site. No template, no page builder, no framework.
 
-> Status: **local review** — not deployed yet.
+> Live: **https://portfolio-agni-v2.vercel.app**
 
 ## What's inside
 
