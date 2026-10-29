@@ -263,7 +263,7 @@ a { color: inherit; }
   letter-spacing: -.02em;
   font-variant-numeric: tabular-nums;
 }
-.hero-nums span {
+.hero-nums span.mono {
   font-size: .7rem;
   color: var(--ink-45);
   display: block;
@@ -854,7 +854,7 @@ a { color: inherit; }
   letter-spacing: -.02em;
   color: var(--ink);
 }
-.metric span { font-size: .72rem; color: var(--ink-45); display: block; margin-top: 6px; line-height: 1.5; }
+.metric > span { font-size: .72rem; color: var(--ink-45); display: block; margin-top: 6px; line-height: 1.5; }
 
 .shot-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .shot-grid.tri { grid-template-columns: repeat(3, 1fr); }
