@@ -862,6 +862,8 @@ a { color: inherit; }
 .shot figcaption { font-size: .68rem; color: var(--ink-45); margin-top: 8px; line-height: 1.5; }
 .shot-grid.portrait { grid-template-columns: repeat(3, 1fr); }
 .shot-grid.portrait .shot img { aspect-ratio: 9 / 19; object-fit: cover; object-position: top; }
+.shot-grid.workshop { grid-template-columns: repeat(3, 1fr); }
+.shot-grid.workshop .shot img { aspect-ratio: 3 / 4; object-fit: cover; }
 
 .learn-list { list-style: none; }
 .learn-list li {
@@ -912,9 +914,9 @@ a { color: inherit; }
   .doc-grid { grid-template-columns: 1fr; }
   .doc-side { position: static; }
   .doc-meta { grid-template-columns: 1fr; }
-  .shot-grid.tri { grid-template-columns: repeat(2, 1fr); }
+  .shot-grid.tri, .shot-grid.workshop { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
   .feat-row { grid-template-columns: 1fr; gap: 4px; }
-  .shot-grid, .shot-grid.portrait, .shot-grid.tri { grid-template-columns: 1fr; }
+  .shot-grid, .shot-grid.portrait, .shot-grid.tri, .shot-grid.workshop { grid-template-columns: 1fr; }
 }

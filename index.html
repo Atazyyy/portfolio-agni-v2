@@ -25,16 +25,17 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#work">Skip to content</a>
+  <a class="skip-link" href="#experience">Skip to content</a>
 
   <!-- ================= HEADER ================= -->
   <header class="site-head">
     <div class="wrap head-grid">
       <a class="wordmark" href="#top">Agni Miftah<span class="wm-dot">.</span></a>
       <nav class="nav" id="nav" aria-label="Main">
+        <a href="#experience">Experience</a>
         <a href="#work">Work</a>
         <a href="#index">Index</a>
-        <a href="#experience">Experience</a>
+        <a href="#record">Record</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -77,11 +78,68 @@
       </div>
     </section>
 
-    <!-- ================= 01 SELECTED WORK ================= -->
+    <!-- ================= 01 FEATURED EXPERIENCE ================= -->
+    <section class="section section-alt" id="experience" aria-labelledby="xp-feat-title" style="border-bottom:0">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-label mono">01 — Featured experience</span>
+          <h2 id="xp-feat-title" class="sec-title">Where I've worked, and what I actually did there</h2>
+          <p class="sec-sub">Real workplaces, real responsibilities — documented with photos from the bench and the lab.</p>
+        </header>
+
+        <div class="work-list">
+
+          <article class="work-row reveal">
+            <a class="work-media" href="projects/drone-nation.html">
+              <img src="assets/img/thumbs/drone-nation.jpg" alt="Drone Nation — drone repair workbench" width="1400" height="781" loading="lazy">
+            </a>
+            <div class="work-body">
+              <span class="work-no mono">Work experience — Mar – Jun 2026</span>
+              <h3 class="work-title">Drone Nation — Drone Technician</h3>
+              <p class="work-desc">
+                Four months on the repair bench for DJI drones: diagnosing failures down to the
+                board, replacing gimbals and ESCs, setting up flight controllers, battery
+                maintenance, and a test flight after every repair. Root-cause first —
+                "it won't fly" is a symptom, not a diagnosis.
+              </p>
+              <dl class="work-meta mono">
+                <div><dt>Org</dt><dd>Drone Nation — service &amp; repair, Bandung</dd></div>
+                <div><dt>Focus</dt><dd>Gimbal · ESC · flight controller · battery · diagnostics</dd></div>
+                <div><dt>More</dt><dd><a class="u-link" href="projects/drone-nation.html">Workshop documentation — 19 photos</a></dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="work-row row-flip reveal">
+            <a class="work-media" href="projects/bioreactor.html">
+              <img src="assets/img/work/bioreactor.jpg" alt="Bioreactor control internship — LSKK ITB" width="1400" height="781" loading="lazy">
+            </a>
+            <div class="work-body">
+              <span class="work-no mono">Internship — Jan – Mar 2024</span>
+              <h3 class="work-title">Bioreactor Control — LSKK, Institut Teknologi Bandung</h3>
+              <p class="work-desc">
+                Control-engineering internship at Lab Sistem Kendali dan Komputer ITB: developed
+                and calibrated the agitator control system of a bioreactor prototype — motor
+                driver wiring, speed feedback, and the testing discipline to make displayed RPM
+                match actual RPM.
+              </p>
+              <dl class="work-meta mono">
+                <div><dt>Org</dt><dd>Lab Sistem Kendali dan Komputer (LSKK), ITB</dd></div>
+                <div><dt>Focus</dt><dd>Control systems · instrumentation · Python · data analysis</dd></div>
+                <div><dt>More</dt><dd><a class="u-link" href="projects/bioreactor.html">Lab documentation — 12 photos</a></dd></div>
+              </dl>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 SELECTED WORK ================= -->
     <section class="section" id="work" aria-labelledby="work-title">
       <div class="wrap">
         <header class="sec-head reveal">
-          <span class="sec-label mono">01 — Selected work</span>
+          <span class="sec-label mono">02 — Selected work</span>
           <h2 id="work-title" class="sec-title">Six projects, chosen with care</h2>
           <p class="sec-sub">Not a wall of cards — just the work, with the numbers it earned.</p>
         </header>
@@ -233,7 +291,7 @@
     <section class="section section-alt" id="index" aria-labelledby="index-title">
       <div class="wrap">
         <header class="sec-head reveal">
-          <span class="sec-label mono">02 — The index</span>
+          <span class="sec-label mono">03 — The index</span>
           <h2 id="index-title" class="sec-title">Everything else, on the record</h2>
           <p class="sec-sub">The full archive: data &amp; AI systems, hardware, and a series of 31 live concept demos. Fictional brands, real engineering.</p>
         </header>
@@ -428,11 +486,11 @@
       </div>
     </section>
 
-    <!-- ================= 03 EXPERIENCE ================= -->
-    <section class="section" id="experience" aria-labelledby="exp-title">
+    <!-- ================= 04 THE RECORD ================= -->
+    <section class="section" id="record" aria-labelledby="exp-title">
       <div class="wrap">
         <header class="sec-head reveal">
-          <span class="sec-label mono">03 — Experience</span>
+          <span class="sec-label mono">04 — The record</span>
           <h2 id="exp-title" class="sec-title">The record so far</h2>
         </header>
 
@@ -445,6 +503,7 @@
               <div class="xp-body">
                 <h4>Drone Nation — Drone Technician</h4>
                 <p>Maintenance, diagnosis and repair of drone systems: gimbals, ESCs, flight controllers, batteries. Root-cause analysis on hardware failures.</p>
+                <p class="xp-verify mono"><a class="u-link" href="projects/drone-nation.html">Workshop documentation — 19 photos →</a></p>
               </div>
             </div>
 
@@ -461,6 +520,15 @@
               <div class="xp-body">
                 <h4>Freelance Graphic &amp; Logo Designer</h4>
                 <p>100+ designs delivered — logos, flyers, social media content. Five years of real clients, real deadlines, real revisions.</p>
+              </div>
+            </div>
+
+            <div class="xp-row reveal">
+              <span class="xp-date mono">Jan — Mar 2024</span>
+              <div class="xp-body">
+                <h4>LSKK ITB — Control Engineering Intern</h4>
+                <p>Bioreactor System Development: developed and calibrated the agitator control system of a lab prototype — aligned actual vs displayed rotation speed through systematic testing.</p>
+                <p class="xp-verify mono"><a class="u-link" href="projects/bioreactor.html">Lab documentation — 12 photos →</a></p>
               </div>
             </div>
 
@@ -542,7 +610,7 @@
     <section class="section section-alt" id="about" aria-labelledby="about-title">
       <div class="wrap">
         <header class="sec-head reveal">
-          <span class="sec-label mono">04 — About</span>
+          <span class="sec-label mono">05 — About</span>
           <h2 id="about-title" class="sec-title">The person behind the commits</h2>
         </header>
 
@@ -613,7 +681,7 @@
     <!-- ================= 05 CONTACT ================= -->
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="wrap">
-        <span class="sec-label mono reveal">05 — Contact</span>
+        <span class="sec-label mono reveal">06 — Contact</span>
         <h2 id="contact-title" class="contact-title reveal">
           Let's build something<br>that <em>ships</em><span class="paper-dot">.</span>
         </h2>
